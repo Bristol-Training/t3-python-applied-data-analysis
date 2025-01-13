@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Clustering – Applied Data Analysis in Python (T3)</title>
+<title>Summary – Applied Data Analysis in Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -101,35 +67,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -140,22 +77,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#a-simple-example" id="toc-a-simple-example" class="nav-link active" data-scroll-target="#a-simple-example">A simple example</a></li>
-  <li><a href="#other-clustering-algorithms" id="toc-other-clustering-algorithms" class="nav-link" data-scroll-target="#other-clustering-algorithms">Other clustering algorithms</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/edit/main/pages/appendix_clustering.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Clustering</h1>
+<h1 class="title">Summary</h1>
 </div>
 
 
@@ -172,152 +102,18 @@ window.Quarto = {
 </header>
 
 
-<p>Clustering is a process by which you collect a large number of data points into a smaller number of groups, based on the distances between them. It is useful in cases where the volumes of data are large and you want to extract some figures of interest. It is a type of <em>unsupervised learning</em>.</p>
-<p>A common use for clustering is identifying distinct subsets of a population, e.g.&nbsp;in a census.</p>
-<p>There are a number of algorithms available for performing clustering but the simplest and most common is <a href="https://en.wikipedia.org/wiki/K-means_clustering"><em>k-means clustering</em></a>.</p>
-<p>It works by taking the n-dimensional data provided, <span class="math inline">\(X\)</span> and randomly places <span class="math inline">\(k\)</span> seed points in the field which represent the centres of the initial clusters.</p>
-<ol type="1">
-<li>It then iterates over every data point in <span class="math inline">\(X\)</span> and assigns each to be associated with whichever cluster centre is closest.</li>
-<li>Once all points have been associated with a cluster, it then iterates over each cluster and calculates the new mean of the cluster to be the centroid of all the points assigned to it.</li>
-</ol>
-<p>Steps 1 and 2 are repeated until the algorithm converges on a result.</p>
-<p><img src="../img/kmeans.gif" style="box-shadow: none;"></p>
-<section id="a-simple-example" class="level3">
-<h3 class="anchored" data-anchor-id="a-simple-example">A simple example</h3>
-<p>Let’s start by using scikit-learn to provide us with some randonly generated data points. It provides a function called <code>make_blobs()</code> which creates a number of gaussian clusters.</p>
-<p>We’ll ask it to create 500 points in 4 clusters. We set <code>random_state=6</code> to ensure that this example will always generate the same points for reproducibility.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> make_blobs</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data, true_labels <span class="op">=</span> make_blobs(n_samples<span class="op">=</span><span class="dv">500</span>, centers<span class="op">=</span><span class="dv">4</span>, random_state<span class="op">=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>We then put the data into a pandas <code>DataFrame</code> to give us a nicer API for working with it. We plot it to see what it looks like, colouring each point according to what cluster is was generated from.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>points <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">"x1"</span>, <span class="st">"x2"</span>])</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>points.plot.scatter(<span class="st">"x1"</span>, <span class="st">"x2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fe524046e50&gt;</code></pre>
-<p><img src="../img/appendix_clustering_6_1.png" class="img-fluid"></p>
-<p>We can see here that these clusters are very distinct. This is a very good situation to use k-means clustering in and it will give a useful result.</p>
-<p>We initialise the <code>KMeans</code> object with the number of clusters we are looking for (<code>n_clusters</code> is a hyperparameter). This is important as k-means requires this decision to be made up-front. There are some clustering algorithms which can attempt to calculate the number of clusters for you but when using k-means you need to make that assessment yourself.</p>
-<p>There are other hyperparameters that can be passed to <code>KMeans</code> which are explained in full in <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html">the documentation</a>.</p>
-<p>Passing the data you want to fit to the <code>fit()</code> method will then actually perform the algormithm. You can pass in nested lists, numpy arrays (as long as they have the shape <span class="math inline">\((N_{samples}, N_{features})\)</span>) or pandas <code>DataFrame</code>s.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">4</span>, n_init<span class="op">=</span><span class="st">"auto"</span>).fit(points)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now that we have calculated the cluster centres, we can use the <code>cluster_centers_</code> data attribute of our model to see what clusters it has decided on.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cluster_centers <span class="op">=</span> pd.DataFrame(kmeans.cluster_centers_, columns<span class="op">=</span>[<span class="st">"x1"</span>, <span class="st">"x2"</span>])</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cluster_centers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-
-<table class="dataframe table table-sm table-striped small">
-<thead>
-<tr>
-<th>
-</th>
-<th>
-x1
-</th>
-<th>
-x2
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>
-0
-</th>
-<td>
-6.485156
-</td>
-<td>
--9.212537
-</td>
-</tr>
-<tr>
-<th>
-1
-</th>
-<td>
--7.857994
-</td>
-<td>
-1.892259
-</td>
-</tr>
-<tr>
-<th>
-2
-</th>
-<td>
-0.485425
-</td>
-<td>
--1.628580
-</td>
-</tr>
-<tr>
-<th>
-3
-</th>
-<td>
-7.886559
-</td>
-<td>
--3.337117
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Comparing these <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> values against the plot above, we see that it seems to have placed the centres in the correct location. It’s better though to be able to see this directly, so let’s plot the centres on top of the original data.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> points.plot.scatter(<span class="st">"x1"</span>, <span class="st">"x2"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cluster_centers.plot.scatter(<span class="st">"x1"</span>, <span class="st">"x2"</span>, ax<span class="op">=</span>ax, c<span class="op">=</span><span class="st">"red"</span>, s<span class="op">=</span><span class="dv">200</span>, marker<span class="op">=</span><span class="st">"x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f75777df2b0&gt;</code></pre>
-<p><img src="../img/appendix_clustering_12_1.png" class="img-fluid"></p>
-<p>The other piece of data that we can retrieve from the model is which cluster it assigned to each data point. This is available as the <code>labels_</code> data attribute and is an array with 500 entries, each being a number between 0 and 3. We can use it to colour our plot to see the clusters emerge.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>points.plot.scatter(<span class="st">"x1"</span>, <span class="st">"x2"</span>, c<span class="op">=</span>kmeans.labels_, colormap<span class="op">=</span><span class="st">"Dark2"</span>, colorbar<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f75773114e0&gt;</code></pre>
-<p><img src="../img/appendix_clustering_14_1.png" class="img-fluid"></p>
-<section id="exercise-1" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-1">Exercise 1</h4>
+<p>That’s all we have for this workshop. By now you should have a better understanding of how you can make your code more easily shared and reusable. In this workshow we have covered:</p>
 <ul>
-<li>Run the above example again but try setting different <code>random_state</code> values when creating the blobs. What happens when the generated clusters overlap a lot?</li>
+<li>How to make you life easier with string formatting</li>
+<li>How to use dictionaries</li>
+<li>Using the Python standard library to find and use useful functions</li>
+<li>Ways of bundling up your code into reusable units with functions</li>
+<li>Making it possible to share your code with others by moving code into modules</li>
+<li>How to produce custom errors</li>
+<li>How to compactly generate lists with list comprehensions</li>
 </ul>
-</section>
-<section id="exercise-2" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-2">Exercise 2</h4>
-<ul>
-<li><p>Using the data provided by <a href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html"><code>scikit-learn.datasets.load_iris</code></a>, perform the clustering on the data.</p>
-<p>Tip: load the data into a <code>DataFrame</code> with:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> pd.DataFrame(load_iris().data, columns<span class="op">=</span>load_iris().feature_names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Tip: Note that the Iris dataset has four input dimensions. You can pass all four columns into the k-means clustering algorithm with <code>kmeans.fit(iris)</code></p>
-<p><a href="../pages/answer_iris_clustering.html"><small>answer</small></a></p></li>
-</ul>
-</section>
-<section id="exercise-3-optional" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-3-optional">Exercise 3 (optional)</h4>
-<ul>
-<li><p>Another data attribute of the model is <code>inertia_</code> which gives you the sum of the squared distances of data points to their closest cluster center. It is this attribute which the algorithm uses to decide whether it has converged. In general a smaller number represents a better fit.</p>
-<p>Write a loop which performs the k-means fit over the blob-generated data with the number of clusters varying from 2 up to 7. For each of these fits, extract the value of the <code>inertia_</code> attribute and draw a plot of inertia against number of clusters.</p>
-<p><a href="../pages/answer_blob_inertia.html"><small>answer</small></a></p></li>
-</ul>
-</section>
-</section>
-<section id="other-clustering-algorithms" class="level3">
-<h3 class="anchored" data-anchor-id="other-clustering-algorithms">Other clustering algorithms</h3>
-<p>There are different clustering algorithms beyond k-means. scikit-learn come with many and you can see them all in <a href="https://scikit-learn.org/stable/modules/clustering.html">the documentation</a>.</p>
-<p>k-means famously has problems with clusters which are elongated in some direction as it assumes sphericity. Look at the fourth row of this image (where the k-means we are using is the one in the first column):</p>
-<p><img src="../img/sphx_glr_plot_cluster_comparison_001.png" class="img-fluid"></p>
-<p>It has failed to cluster the three groups in the way that we as humans would have done. Other algorithms (such as DBSCAN) perform better in that situation.</p>
-<p>One solution with k-means is to transform the data in some way to make it more spherical and then apply clustering. This pre-processing can be done with something like PCA.</p>
-<p>The other type of preprocessing you may like to do is to manually reparameterise the data. For example, the first row has two circular clusters which share a centre. Since k-means works on cluster-centres it can’t tell them apart. However, if that data was reparameterised into <span class="math inline">\((r, \theta)\)</span> then the two clusters would become distinct and k-means would work well.</p>
-<p>This is why it’s always worth plotting your data and deciding how to process it before throwing machine learning algorithms at it.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -412,7 +208,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/Bristol-Training\.github\.io\/t3-python-applied-data-analysis\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -748,7 +544,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/edit/main/pages/appendix_clustering.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/980-summary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

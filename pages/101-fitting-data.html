@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Testing your model – Applied Data Analysis in Python (T3)</title>
+<title>Regression – Applied Data Analysis in Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,7 +147,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/300-machine-learning.html">Model fitting</a></li><li class="breadcrumb-item"><a href="../pages/200-validation.html">Testing your model</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/100-fitting-data.html">Fitting data</a></li><li class="breadcrumb-item"><a href="../pages/101-fitting-data.html">Regression</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -165,7 +165,7 @@ window.Quarto = {
       <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Applied Data Analysis in Python (T3)</a> 
+      <a href="../">Applied Data Analysis in Python</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -181,10 +181,34 @@ window.Quarto = {
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workspace Setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/002-jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting familiar with Notebooks</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/091-loading-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading your data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/300-machine-learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Machine Learning</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Working framework</span></a>
+            <a href="../pages/100-fitting-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitting data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -192,108 +216,63 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Workspace Setup</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/002-jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Getting familiar with Notebooks</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/091-loading-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Loading your data</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Model fitting</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/300-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Machine Learning</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/100-fitting-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fitting data: regression</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/200-validation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Testing your model</span></a>
+  <a href="../pages/101-fitting-data.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/102-nearest-neighbours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fitting data: classification</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/500-hyperparameters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Choosing hyperparameters</span></a>
+ <span class="menu-text">Classification</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/990-what-next.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Discussion</span></a>
+  <a href="../pages/200-validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testing your model</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">About</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/999-how-to.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to read</span></a>
+  <a href="../pages/500-hyperparameters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing hyperparameters</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/990-what-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Further methods</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/999-contributors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Contributors</span></a>
+ <span class="menu-text">About</span></a>
   </div>
 </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#input-data" id="toc-input-data" class="nav-link active" data-scroll-target="#input-data">Input data</a></li>
+  <li><a href="#linear-regression" id="toc-linear-regression" class="nav-link" data-scroll-target="#linear-regression">Linear regression</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/101-fitting-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/300-machine-learning.html">Model fitting</a></li><li class="breadcrumb-item"><a href="../pages/200-validation.html">Testing your model</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/100-fitting-data.html">Fitting data</a></li><li class="breadcrumb-item"><a href="../pages/101-fitting-data.html">Regression</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Testing your model</h1>
+<h1 class="title">Regression</h1>
 </div>
 
 
@@ -310,20 +289,20 @@ window.Quarto = {
 </header>
 
 
-<div id="highlights" class="callout callout-style-default callout-note no-icon callout-titled" title="In this section...">
+<div id="highlights" class="callout callout-style-default callout-note no-icon callout-titled" title="Key points">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-In this section…
+Key points
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>Implement train-test splits to evaluate model performance</li>
-<li>Understand the importance of data splitting in preventing overfitting</li>
-</ul>
+<p>This are the key points of the section:</p>
+<pre><code>- 1
+
+- 2</code></pre>
 </div>
 </div>
 <div id="answerN" class="callout callout-style-default callout-warning no-icon callout-titled" title="Trainer notes">
@@ -338,65 +317,133 @@ Trainer notes
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Recommended time: 30 minutes</p>
-<p>This sections…</p>
-<p>Common issues:</p>
+<p>Important points to consider:</p>
+<pre><code>- 1
+
+- 2</code></pre>
 </div>
 </div>
 </div>
-<p>So far we have been fitting our model to the data and assuming that it is doing a good job. We have not had any method for analysing the quality of the fit. In our example so far we first looked at the fit with our eyes and judged it sufficient. We then compared the output parameters with our ground-truth and judged it to be “close enough”.</p>
-<p>To truly judge how good the model is, we need to compare it with some data and see how well it aligns (i.e.&nbsp;how well it would be able to predict it).</p>
-<p>Naïvely we might think to compare our model against the same data we used to fit it. However, this is a dangerous thing to do as it encourages you to tweak your model to best fit the data that you have in hand rather than trying to make a model which can predict things about the <em>process which generated</em> your data. Making your model fit your local subset well, at the expense of the global superset is known as <em>overfitting</em>.</p>
-<p>For example, imagine we have a true physical model:</p>
-<p><img src="../img/overfit_just_model.svg" style="box-shadow: none;" width="400"></p>
-<p>If we want to understand the underlying model, we can make measurements of it:</p>
-<p><img src="../img/overfit_model.svg" style="box-shadow: none;" width="400"></p>
-<p>However, we cannot see the underlying model directly so all that we see is:</p>
-<p><img src="../img/overfit_samples.svg" style="box-shadow: none;" width="400"></p>
-<p>We can fit this model with perhaps varying degrees of polynomial. Mathematically, if we increase the degree of polynomial far enough we can fit any function. For example, fitting the data with a 15<sup>th</sup>-order polynomial creates a model which goes through most of the data points but clearly represent the underlying model badly:</p>
-<p><img src="../img/overfit_15.svg" style="box-shadow: none;" width="400"></p>
-<p>Here we can <em>see</em> that the model is not doing a good job of representing the underlying function (because we saw it above) but in the real world you do not usually have the underlying model available. In those cases overfitting is harder to see as it just manifests as a “well-performing” model. Seen in isolation, this model looks like it is performing quite well, whereas a 3<sup>rd</sup>-order polynomial looks slightly worse (as fewer of the bumps are accounted for):</p>
-<p><img src="../img/overfit_3.svg" style="box-shadow: none;" width="400"></p>
-<p>The simplest solution to overfitting is to fit your model with one subset of data and then assess its quality with another subset. If those two subsets are independent then any specific features in the former which your model might try to overfit to will not be present in the latter and so it will be judged poorly.</p>
-<p><img src="../img/overfit_split.svg" style="box-shadow: none;" width="400"></p>
-<p>Bringing up our data from the last chapter again:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"https://bristol-training.github.io/applied-data-analysis-in-python/data/linear.csv"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data[[<span class="st">"x"</span>]]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">"y"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>scikit-learn provides a built-in function, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html"><code>train_test_split</code></a>, to split your data into a subset of data to fit with and a subset of data to test against:</p>
-<div id="9c151acb" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>train_X, test_X, train_y, test_y <span class="op">=</span> train_test_split(X, y, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>train_test_split</code> will split your data randomly and so to get a reproducible “random” split we set the <code>random_state</code> argument.</p>
-<p>To see that <code>train</code> and <code>test</code> are taken from the same distribution let’s plot them:</p>
-<div id="9c7484a9" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<p>The process of extracting information from data using computers is called <em>machine learning</em>.</p>
+<p>Machine learning a very large field and covers a whole host of techniques. In this course we will be discovering a few of them but let’s first start with the simplest form of machine learning, the <em>linear fit</em> or <em>linear regression</em>.</p>
+<section id="input-data" class="level3">
+<h3 class="anchored" data-anchor-id="input-data">Input data</h3>
+<p>First we shall need some data. For this example we shall be pretending that we have measured these data from an experiment and we want to extract the underlying parameters of the system that generated them.</p>
+<p>I have prepared a CSV file which you can read into pandas using <code>read_csv</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Label the original DataFrame with the test/train split</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># This is just used for plotting purposes</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data.loc[train_X.index, <span class="st">"train/test"</span>] <span class="op">=</span> <span class="st">"train"</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>data.loc[test_X.index, <span class="st">"train/test"</span>] <span class="op">=</span> <span class="st">"test"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>sns.relplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>, hue<span class="op">=</span><span class="st">"train/test"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"https://bristol-training.github.io/applied-data-analysis-in-python/data/linear.csv"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="72fb51d4" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">x</th>
+<th data-quarto-table-cell-role="th">y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3.745401</td>
+<td>3.229269</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>9.507143</td>
+<td>14.185654</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>7.319939</td>
+<td>9.524231</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>5.986585</td>
+<td>6.672066</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>1.560186</td>
+<td>-3.358149</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>We can see here that the data has two columns, <code>x</code> and <code>y</code>. Traditionally, <span class="math inline">\(x\)</span> is used for the things we can easily measure in the world and use as inputs, and <span class="math inline">\(y\)</span> is used for the thing we want to predict. In our case, we want to work out what the value of <span class="math inline">\(y\)</span> should be for any given <span class="math inline">\(x\)</span>.</p>
+<p>In this case we have one single <span class="math inline">\(x\)</span> column but in a more complicated data set we may have multiple <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span> etc. in which case the set together is sometimes given the upper-case letter <span class="math inline">\(X\)</span>. Each <span class="math inline">\(x_n\)</span> column is called a <em>feature</em>. Features are usually things that you have measured as part of a experiment (e.g.&nbsp;height of a person, temperature of a room, size of a garden etc.).</p>
+<p>Our <span class="math inline">\(y\)</span> column is the thing that we are going to create a model to predict the value of. The <span class="math inline">\(y\)</span> column of the input data is often called the <em>label</em> or the <em>target</em>.</p>
+<p>Let’s check how many rows we have:</p>
+<div id="0f09af22" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data.count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>x    50
+y    50
+dtype: int64</code></pre>
+</div>
+</div>
+<p>We have 50 rows here. In the input data, each row is often called a <em>sample</em> (though sometimes also called an <em>instance</em>, <em>example</em> or <em>observation</em>). For example, it could be the information about a single person from a census or the measurements at a particular time from a weather station.</p>
+<div id="keypointsN" class="callout callout-style-default callout-tip no-icon callout-titled" title="Tidy data">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tidy data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tidy data is data where:</p>
+<ul>
+<li>Each variable is a column; each column is a variable.</li>
+<li>Each observation is a row; each row is an observation.</li>
+<li>Each value is a cell; each cell is a single value.</li>
+</ul>
+</div>
+</div>
+<p>Let’s have a look at what the data looks like when plotted:</p>
+<div id="7c1cec65" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>sns.relplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="200-validation_files/figure-html/cell-4-output-1.png" width="545" height="470" class="figure-img"></p>
+<p><img src="101-fitting-data_files/figure-html/cell-4-output-1.png" width="470" height="470" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Now that we have <code>train</code> and <code>test</code> we should only ever pass <code>train</code> to the <code>fit</code> function:</p>
-<div id="00932a2c" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression(fit_intercept<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>model.fit(train_X, train_y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can clearly visually see here that there is a linear relationship between the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> values but we need to be able to extract the exact parameters programmatically.</p>
+</section>
+<section id="linear-regression" class="level3">
+<h3 class="anchored" data-anchor-id="linear-regression">Linear regression</h3>
+<section id="setting-up-our-model" class="level4">
+<h4 class="anchored" data-anchor-id="setting-up-our-model">Setting up our model</h4>
+<p>For this and for the other machine learning techniques in this course, we will be using <a href="http://scikit-learn.org/">scikit-learn</a>. It provides a whole host of tools for studying data. You may also want to investigate <a href="https://www.statsmodels.org">statsmodels</a> which also provides a large number of tools for statistical exploration.</p>
+<p>scikit-learn provides a number of models which you can use to study your data. Each model is a Python class which can be imported and used. The usual process for using a model is:</p>
+<ol type="1">
+<li>Import the model you want to use</li>
+<li>Create an instance of that model and set any <em>hyperparameters</em> you want</li>
+<li><em>Fit</em> the model to the data, this computes the parameters of the model using machine learning</li>
+<li><em>Predict</em> new information using the model</li>
+</ol>
+<p>As we saw by plotting the data, the relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is linear. In scitkit-learn, linear regression is available as <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html"><code>scikit-learn.linear_model.LinearRegression</code></a>.</p>
+<p>We import the model and create an instance of it. By default the <code>LinearRegression</code> model will fit the y-intercept, but since we don’t want to make that assumption we explicitly pass <code>fit_intercept=True</code>. <code>fit_intercept</code> is an example of a <em>hyperparameter</em>, which are variables or options in a model which you set up-front rather than letting them be learned from the data.</p>
+<div id="505c07f2" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression(fit_intercept<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <style>#sk-container-id-1 {
   /* Definition of color scheme common for light and dark mode */
@@ -802,19 +849,501 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</a></style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;LinearRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
+</a></style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label  sk-toggleable__label-arrow ">&nbsp;&nbsp;LinearRegression<a class="sk-estimator-doc-link " rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link ">i<span>Not fitted</span></span></label><div class="sk-toggleable__content "><pre>LinearRegression()</pre></div> </div></div></div></div>
 </div>
 </div>
-<p>To find out how good the fit was, we can call the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#scikit-learn.linear_model.LinearRegression.score"><code>score</code></a> method on the model. It is important here that we pass in our <em>test</em> data set as we expect that to provide an independent validation of the model.</p>
-<div id="451decd9" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>model.score(test_X, test_y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>0.9676069631786153</code></pre>
+<p>When running a Jupyter Notebook, you will see this model summary box appear every time a cell evaluates to the model itself. Here, writing <code>model</code> causes this to happen explicitly but it will happen any time the last line in a cell has the return value of the model too.</p>
+</section>
+<section id="fitting-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="fitting-the-data">Fitting the data</h4>
+<p>Once we have created our model, we can fit it to the data by calling the <code>fit()</code> method on it. This takes two arguments:</p>
+<ol type="1">
+<li>The input data as a <em>two-dimensional</em> structure of the size <span class="math inline">\((N_{samples}, N_{features})\)</span>.</li>
+<li>The labels or targets of the data as a <em>one-dimensional</em> data structure of size <span class="math inline">\((N_{samples})\)</span>.</li>
+</ol>
+<p>In our case we only have one feature, <span class="math inline">\(x\)</span>, and 50 data points so it should be in the shape <span class="math inline">\((50, 1)\)</span>. If we just request <code>data["x"]</code> then that will be a 1D array (actually a pandas <code>Series</code>) of shape <span class="math inline">\((50)\)</span> so we must request the data with <code>data[["x"]]</code> (which returns it as a single-column, but still two-dimensional, <code>DataFrame</code>). For a more thorough explanation of this dimensionality difference, see <a href="aside_one_two_dimensional.qmd">this explanation</a>.</p>
+<p>If you’re using pandas to store your data (as we are) then just remember that the first argument should be a <code>DataFrame</code> and the second should be a <code>Series</code>.</p>
+<div id="92a66e7c" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data[[<span class="st">"x"</span>]]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">"y"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="9c5d0566" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model.fit(X, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<style>#sk-container-id-2 {
+  /* Definition of color scheme common for light and dark mode */
+  --sklearn-color-text: black;
+  --sklearn-color-line: gray;
+  /* Definition of color scheme for unfitted estimators */
+  --sklearn-color-unfitted-level-0: #fff5e6;
+  --sklearn-color-unfitted-level-1: #f6e4d2;
+  --sklearn-color-unfitted-level-2: #ffe0b3;
+  --sklearn-color-unfitted-level-3: chocolate;
+  /* Definition of color scheme for fitted estimators */
+  --sklearn-color-fitted-level-0: #f0f8ff;
+  --sklearn-color-fitted-level-1: #d4ebff;
+  --sklearn-color-fitted-level-2: #b3dbfd;
+  --sklearn-color-fitted-level-3: cornflowerblue;
+
+  /* Specific color for light theme */
+  --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, white)));
+  --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-icon: #696969;
+
+  @media (prefers-color-scheme: dark) {
+    /* Redefinition of color scheme for dark theme */
+    --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, #111)));
+    --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-icon: #878787;
+  }
+}
+
+#sk-container-id-2 {
+  color: var(--sklearn-color-text);
+}
+
+#sk-container-id-2 pre {
+  padding: 0;
+}
+
+#sk-container-id-2 input.sk-hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#sk-container-id-2 div.sk-dashed-wrapped {
+  border: 1px dashed var(--sklearn-color-line);
+  margin: 0 0.4em 0.5em 0.4em;
+  box-sizing: border-box;
+  padding-bottom: 0.4em;
+  background-color: var(--sklearn-color-background);
+}
+
+#sk-container-id-2 div.sk-container {
+  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
+     but bootstrap.min.css set `[hidden] { display: none !important; }`
+     so we also need the `!important` here to be able to override the
+     default hidden behavior on the sphinx rendered scikit-learn.org.
+     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
+  display: inline-block !important;
+  position: relative;
+}
+
+#sk-container-id-2 div.sk-text-repr-fallback {
+  display: none;
+}
+
+div.sk-parallel-item,
+div.sk-serial,
+div.sk-item {
+  /* draw centered vertical line to link estimators */
+  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Parallel-specific style estimator block */
+
+#sk-container-id-2 div.sk-parallel-item::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
+  flex-grow: 1;
+}
+
+#sk-container-id-2 div.sk-parallel {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: var(--sklearn-color-background);
+  position: relative;
+}
+
+#sk-container-id-2 div.sk-parallel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#sk-container-id-2 div.sk-parallel-item:first-child::after {
+  align-self: flex-end;
+  width: 50%;
+}
+
+#sk-container-id-2 div.sk-parallel-item:last-child::after {
+  align-self: flex-start;
+  width: 50%;
+}
+
+#sk-container-id-2 div.sk-parallel-item:only-child::after {
+  width: 0;
+}
+
+/* Serial-specific style estimator block */
+
+#sk-container-id-2 div.sk-serial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sklearn-color-background);
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+
+/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
+clickable and can be expanded/collapsed.
+- Pipeline and ColumnTransformer use this feature and define the default style
+- Estimators will overwrite some part of the style using the `sk-estimator` class
+*/
+
+/* Pipeline and ColumnTransformer style (default) */
+
+#sk-container-id-2 div.sk-toggleable {
+  /* Default theme specific background. It is overwritten whether we have a
+  specific estimator or a Pipeline/ColumnTransformer */
+  background-color: var(--sklearn-color-background);
+}
+
+/* Toggleable label */
+#sk-container-id-2 label.sk-toggleable__label {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#sk-container-id-2 label.sk-toggleable__label-arrow:before {
+  /* Arrow on the left of the label */
+  content: "▸";
+  float: left;
+  margin-right: 0.25em;
+  color: var(--sklearn-color-icon);
+}
+
+#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {
+  color: var(--sklearn-color-text);
+}
+
+/* Toggleable content - dropdown */
+
+#sk-container-id-2 div.sk-toggleable__content {
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
+  text-align: left;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-2 div.sk-toggleable__content.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-2 div.sk-toggleable__content pre {
+  margin: 0.2em;
+  border-radius: 0.25em;
+  color: var(--sklearn-color-text);
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-2 div.sk-toggleable__content.fitted pre {
+  /* unfitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+  /* Expand drop-down */
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+  content: "▾";
+}
+
+/* Pipeline/ColumnTransformer-specific style */
+
+#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-2 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator-specific style */
+
+/* Colorize estimator box */
+#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-2 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+#sk-container-id-2 div.sk-label label.sk-toggleable__label,
+#sk-container-id-2 div.sk-label label {
+  /* The background is the default theme color */
+  color: var(--sklearn-color-text-on-default-background);
+}
+
+/* On hover, darken the color of the background */
+#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+/* Label box, darken color on hover, fitted */
+#sk-container-id-2 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator label */
+
+#sk-container-id-2 div.sk-label label {
+  font-family: monospace;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+#sk-container-id-2 div.sk-label-container {
+  text-align: center;
+}
+
+/* Estimator-specific */
+#sk-container-id-2 div.sk-estimator {
+  font-family: monospace;
+  border: 1px dotted var(--sklearn-color-border-box);
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-2 div.sk-estimator.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+/* on hover */
+#sk-container-id-2 div.sk-estimator:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-2 div.sk-estimator.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Specification for estimator info (e.g. "i" and "?") */
+
+/* Common style for "i" and "?" */
+
+.sk-estimator-doc-link,
+a:link.sk-estimator-doc-link,
+a:visited.sk-estimator-doc-link {
+  float: right;
+  font-size: smaller;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1em;
+  height: 1em;
+  width: 1em;
+  text-decoration: none !important;
+  margin-left: 1ex;
+  /* unfitted */
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+  color: var(--sklearn-color-unfitted-level-1);
+}
+
+.sk-estimator-doc-link.fitted,
+a:link.sk-estimator-doc-link.fitted,
+a:visited.sk-estimator-doc-link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+div.sk-estimator:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover,
+div.sk-label-container:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover,
+div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+/* Span, style for the box shown on hovering the info icon */
+.sk-estimator-doc-link span {
+  display: none;
+  z-index: 9999;
+  position: relative;
+  font-weight: normal;
+  right: .2ex;
+  padding: .5ex;
+  margin: .5ex;
+  width: min-content;
+  min-width: 20ex;
+  max-width: 50ex;
+  color: var(--sklearn-color-text);
+  box-shadow: 2pt 2pt 4pt #999;
+  /* unfitted */
+  background: var(--sklearn-color-unfitted-level-0);
+  border: .5pt solid var(--sklearn-color-unfitted-level-3);
+}
+
+.sk-estimator-doc-link.fitted span {
+  /* fitted */
+  background: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-3);
+}
+
+.sk-estimator-doc-link:hover span {
+  display: block;
+}
+
+/* "?"-specific style due to the `<a>` HTML tag */
+
+#sk-container-id-2 a.estimator_doc_link {
+  float: right;
+  font-size: 1rem;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+  text-decoration: none;
+  /* unfitted */
+  color: var(--sklearn-color-unfitted-level-1);
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+}
+
+#sk-container-id-2 a.estimator_doc_link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+#sk-container-id-2 a.estimator_doc_link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+#sk-container-id-2 a.estimator_doc_link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+}
+</a></style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked=""><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;LinearRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
 </div>
 </div>
-<p>A score of <span class="math inline">\(1.0\)</span> is a perfect match and anything less than that is less-well performing. A score of <span class="math inline">\(0.97\)</span> suggests we have a very good model.</p>
-<p>Going back to our example from the start, we can see that when we compare our 3<sup>rd</sup>- and 15<sup>th</sup>-order polynomials against the <em>test data</em>, the 3<sup>rd</sup>-order score will be much better:</p>
-<p><img src="../img/overfit_3_15_split.svg" style="box-shadow: none;" width="400"></p>
+<p>It is when you call this function that scikit-learn will go away and perform the machine learning algorithm. In our case it takes a fraction of a second but more complex models could take hours to compute.</p>
+<p>By the time that this function returns, the <code>model</code> object will have had it’s internal parameters set as best the algorithm can do in order to predict <span class="math inline">\(y\)</span> from <span class="math inline">\(x\)</span>.</p>
+<p>We see the summary box appear here too as the <code>fit</code> method returns the model that it was called on, allowing you to chain together methods if you want.</p>
+</section>
+<section id="making-predictions-using-the-model" class="level4">
+<h4 class="anchored" data-anchor-id="making-predictions-using-the-model">Making predictions using the model</h4>
+<p>Once we’ve performed the fit, we can use it to predict the value of new data points which weren’t part of the original data set.</p>
+<p>We can use this to plot the fit over the original data to compare the result. By getting the predicted <span class="math inline">\(y\)</span> values for the minimum and maximum <span class="math inline">\(x\)</span> values, we can plot a straight line between them to visualise the model.</p>
+<p>The <code>predict()</code> function takes an array of the same shape as the original input data (<span class="math inline">\((N_{samples}, N_{features})\)</span>) so we put our list of <span class="math inline">\(x\)</span> values into a <code>DataFrame</code> before passing it to <code>predict()</code>.</p>
+<p>We then plot the original data in the same way as before and draw the prediction line in the same plot.</p>
+<div id="a8d6b8dd" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span>: [<span class="dv">0</span>, <span class="dv">10</span>]})  <span class="co"># Make a new DataFrame containing the X values</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>pred[<span class="st">"y"</span>] <span class="op">=</span> model.predict(pred)  <span class="co"># Make a prediction and add that data into the table</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">x</th>
+<th data-quarto-table-cell-role="th">y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0</td>
+<td>-4.903311</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>10</td>
+<td>14.873255</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="211855a2" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>sns.relplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>pred, x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>, c<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="101-fitting-data_files/figure-html/cell-9-output-1.png" width="468" height="470" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As well as plotting the line in a graph, we can also extract the calculated values of the gradient and y-intercept. The gradient is available as a list of values, <code>model.coef_</code>, one for each dimension or feature. The intercept is available as <code>model.intercept_</code>:</p>
+<div id="a4f711c3" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Model gradient: "</span>, model.coef_[<span class="dv">0</span>])</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Model intercept:"</span>, model.intercept_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> Model gradient:  1.9776566003853107
+Model intercept: -4.9033107255311155</code></pre>
+</div>
+</div>
+<p>The equation that we have extracted can therefore be represented as:</p>
+<p><span class="math display">\[y = 1.97 x - 4.90\]</span></p>
+<p>The original data was produced (with random wobble applied) from a straight line with gradient <span class="math inline">\(2\)</span> and y-intercept of <span class="math inline">\(-5\)</span>. Our model has managed to predict values very close to the original.</p>
 <div id="exampleN" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -826,18 +1355,13 @@ Exercise
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>Load the <a href="https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset">diabetes dataset</a> from the scikit-learn collection. You can load the dataset into pandas with:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_diabetes</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_diabetes(as_frame<span class="op">=</span><span class="va">True</span>, return_X_y<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Split the data into <code>train</code> and <code>test</code> subsets</p></li>
-<li><p>Fit and plot the linear relationship between the “bmi” column (Body mass index) and the “target” column (quantitative measure of disease progression one year after baseline).</p></li>
-<li><p>Calculate the score of the model against the <code>test</code> data set.</p></li>
+<li>Run the above data reading and model fitting. Ensure that you get the same answer we got above.</li>
+<li>Try fitting without allowing the y-intercept to vary. How does it affect the prediction of the gradient?</li>
 </ul>
 </div>
 </div>
 <div id="answerN" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -846,238 +1370,17 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_diabetes</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_diabetes(as_frame<span class="op">=</span><span class="va">True</span>, return_X_y<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>X.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-
-<table class="dataframe table table-sm table-striped small">
-<thead>
-<tr>
-<th>
-</th>
-<th>
-age
-</th>
-<th>
-sex
-</th>
-<th>
-bmi
-</th>
-<th>
-bp
-</th>
-<th>
-s1
-</th>
-<th>
-s2
-</th>
-<th>
-s3
-</th>
-<th>
-s4
-</th>
-<th>
-s5
-</th>
-<th>
-s6
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>
-0
-</th>
-<td>
-0.038076
-</td>
-<td>
-0.050680
-</td>
-<td>
-0.061696
-</td>
-<td>
-0.021872
-</td>
-<td>
--0.044223
-</td>
-<td>
--0.034821
-</td>
-<td>
--0.043401
-</td>
-<td>
--0.002592
-</td>
-<td>
-0.019907
-</td>
-<td>
--0.017646
-</td>
-</tr>
-<tr>
-<th>
-1
-</th>
-<td>
--0.001882
-</td>
-<td>
--0.044642
-</td>
-<td>
--0.051474
-</td>
-<td>
--0.026328
-</td>
-<td>
--0.008449
-</td>
-<td>
--0.019163
-</td>
-<td>
-0.074412
-</td>
-<td>
--0.039493
-</td>
-<td>
--0.068332
-</td>
-<td>
--0.092204
-</td>
-</tr>
-<tr>
-<th>
-2
-</th>
-<td>
-0.085299
-</td>
-<td>
-0.050680
-</td>
-<td>
-0.044451
-</td>
-<td>
--0.005670
-</td>
-<td>
--0.045599
-</td>
-<td>
--0.034194
-</td>
-<td>
--0.032356
-</td>
-<td>
--0.002592
-</td>
-<td>
-0.002861
-</td>
-<td>
--0.025930
-</td>
-</tr>
-<tr>
-<th>
-3
-</th>
-<td>
--0.089063
-</td>
-<td>
--0.044642
-</td>
-<td>
--0.011595
-</td>
-<td>
--0.036656
-</td>
-<td>
-0.012191
-</td>
-<td>
-0.024991
-</td>
-<td>
--0.036038
-</td>
-<td>
-0.034309
-</td>
-<td>
-0.022688
-</td>
-<td>
--0.009362
-</td>
-</tr>
-<tr>
-<th>
-4
-</th>
-<td>
-0.005383
-</td>
-<td>
--0.044642
-</td>
-<td>
--0.036385
-</td>
-<td>
-0.021872
-</td>
-<td>
-0.003935
-</td>
-<td>
-0.015596
-</td>
-<td>
-0.008142
-</td>
-<td>
--0.002592
-</td>
-<td>
--0.031988
-</td>
-<td>
--0.046641
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>train_X, test_X, train_y, test_y <span class="op">=</span> train_test_split(X, y, random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression(fit_intercept<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>model.fit(train_X[[<span class="st">"bmi"</span>]], train_y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"https://bristol-training.github.io/applied-data-analysis-in-python/data/linear.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression(fit_intercept<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data[[<span class="st">"x"</span>]]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">"y"</span>]</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>model.fit(X, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <style>#sk-container-id-1 {
   /* Definition of color scheme common for light and dark mode */
   --scikit-learn-color-text: black;
@@ -1485,7 +1788,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </a></style>
 <div id="sk-container-id-1" class="sk-top-container">
 <div class="sk-text-repr-fallback">
-<pre>LinearRegression()</pre>
+<pre>LinearRegression(fit_intercept=False)</pre>
 <b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b>
 </div>
 <div class="sk-container" hidden="">
@@ -1493,29 +1796,31 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="sk-estimator fitted sk-toggleable">
 <input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;LinearRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label>
 <div class="sk-toggleable__content fitted">
-<pre>LinearRegression()</pre>
+<pre>LinearRegression(fit_intercept=False)</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>model.score(test_X[[<span class="st">"bmi"</span>]], test_y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>0.3172099449537781</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> pd.DataFrame({<span class="st">"bmi"</span>: [X[<span class="st">"bmi"</span>].<span class="bu">min</span>(), X[<span class="st">"bmi"</span>].<span class="bu">max</span>()]})</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>pred[<span class="st">"y"</span>] <span class="op">=</span> model.predict(pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>sns.relplot(data<span class="op">=</span>X, x<span class="op">=</span><span class="st">"bmi"</span>, y<span class="op">=</span>y)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>pred, x<span class="op">=</span><span class="st">"bmi"</span>, y<span class="op">=</span><span class="st">"y"</span>, c<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>&lt;Axes: xlabel='bmi', ylabel='target'&gt;</code></pre>
-<p><img src="../img/answer_diabetes_regression_4_1.png" class="img-fluid"></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span>: [<span class="dv">0</span>, <span class="dv">10</span>]})</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>pred[<span class="st">"y"</span>] <span class="op">=</span> model.predict(pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>sns.relplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>pred, x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>, c<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">":"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>&lt;Axes: xlabel='x', ylabel='y'&gt;</code></pre>
+<p><img src="../img/answer_no_y_intercept_3_1.png" class="img-fluid"></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">" Model gradient: "</span>, model.coef_[<span class="dv">0</span>])</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Model intercept:"</span>, model.intercept_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code> Model gradient:  1.1985226874421444
+Model intercept: 0.0</code></pre>
 </div>
 </div>
 </div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1610,7 +1915,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/Bristol-Training\.github\.io\/t3-python-applied-data-analysis\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -1940,13 +2245,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/100-fitting-data.html" class="pagination-link" aria-label="Fitting data: regression">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Fitting data: regression</span>
+      <a href="../pages/100-fitting-data.html" class="pagination-link" aria-label="Fitting data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Fitting data</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/102-nearest-neighbours.html" class="pagination-link" aria-label="Fitting data: classification">
-        <span class="nav-page-text">Fitting data: classification</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/102-nearest-neighbours.html" class="pagination-link" aria-label="Classification">
+        <span class="nav-page-text">Classification</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1958,7 +2263,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/edit/main/pages/200-validation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/101-fitting-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

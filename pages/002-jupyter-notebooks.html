@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Getting familiar with Notebooks – Applied Data Analysis in Python</title>
+<title>Getting familiar with Notebooks – Applied Data Analysis in Python (T3)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../pages/091-loading-data.html" rel="next">
+<link href="../pages/001-workspace-setup.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -107,12 +109,152 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/001-workspace-setup.html">Working framework</a></li><li class="breadcrumb-item"><a href="../pages/002-jupyter-notebooks.html">Getting familiar with Notebooks</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Applied Data Analysis in Python (T3)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Working framework</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workspace Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/002-jupyter-notebooks.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Getting familiar with Notebooks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/091-loading-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading your data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Model fitting</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/300-machine-learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Machine Learning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/100-fitting-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitting data: regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/200-validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testing your model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/102-nearest-neighbours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitting data: classification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/500-hyperparameters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing hyperparameters</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/990-what-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Discussion</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/999-how-to.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to read</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/999-contributors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributors</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -121,12 +263,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#markdown" id="toc-markdown" class="nav-link active" data-scroll-target="#markdown">Markdown</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/002-jupyter-notebooks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/edit/main/pages/002-jupyter-notebooks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/001-workspace-setup.html">Working framework</a></li><li class="breadcrumb-item"><a href="../pages/002-jupyter-notebooks.html">Getting familiar with Notebooks</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Getting familiar with Notebooks</h1>
 </div>
@@ -180,7 +322,7 @@ Trainer notes
 <p>This course will use a tool called <em>Jupyter Notebooks</em> to run your Python code. Once Anaconda is installed, start “Anaconda Navigator” and press the JupyterLab button on the main screen:</p>
 <p>Throughout this course you will likely want to start a new notebook for each section of the course so name them appropriately to make it easier to find them later. To open a Notebook in Anaconda you can go to JupyterLab and there go to <code>File</code> &gt; <code>New</code> &gt; <code>Notebook</code> or click the <code>Python 3</code> button under <code>Notebook</code> section in the <code>Launcher</code> tab.</p>
 <p>Once the notebook is launched, you will see a wide grey box with a blue <code>[ ]:</code> to the left. The grey box is an input cell where you type any Python code you want to run:</p>
-<div id="db428f60" class="cell" data-execution_count="1">
+<div id="7c35641c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python code can be written in 'Code' cells</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Output appears below when the cell is run"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"To run a cell, press Ctrl-Enter or Shift-Enter with the cursor inside"</span>)</span>
@@ -192,7 +334,7 @@ or use the run button (▶) in the toolbar at the top</code></pre>
 </div>
 </div>
 <p>In your notebook, type the following in the first cell and then run it with Shift-Enter, you should see the same output:</p>
-<div id="00ffdc7c" class="cell" data-execution_count="2">
+<div id="948ad6d7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">7</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">+</span> b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -201,14 +343,14 @@ or use the run button (▶) in the toolbar at the top</code></pre>
 </div>
 </div>
 <p>The cells in a notebook are linked together so a variable defined in one is available in all the cells from that point on so in the second cell you can use the variables <code>a</code> and <code>b</code>:</p>
-<div id="e6a3b780" class="cell" data-execution_count="3">
+<div id="9feb6022" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">-</span> b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>-2</code></pre>
 </div>
 </div>
 <p>Some Python libraries have special integration with Jupyter notebooks and so can display their output directly into the page. For example <code>pandas</code> will format tables of data nicely and <code>matplotlib</code> will embed graphs directly:</p>
-<div id="36e0d042" class="cell" data-execution_count="4">
+<div id="81868202" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> pd.DataFrame(</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    [<span class="fl">3.1</span>, <span class="fl">2.4</span>, <span class="fl">4.8</span>, <span class="fl">4.1</span>, <span class="fl">3.4</span>, <span class="fl">4.2</span>],</span>
@@ -262,7 +404,7 @@ or use the run button (▶) in the toolbar at the top</code></pre>
 </div>
 </div>
 </div>
-<div id="9183f374" class="cell" data-execution_count="5">
+<div id="11c09636" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>temp.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -287,7 +429,7 @@ Exercise
 </div>
 <div class="callout-body-container callout-body">
 <p>Take the following code and break it down, chunk by chunk, interspersing it with documentation explaining what each part does using Markdown blocks:</p>
-<div id="548085c2" class="cell" data-execution_count="6">
+<div id="7537b3f2" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>prices <span class="op">=</span> {</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"apple"</span>: <span class="fl">0.40</span>,</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"banana"</span>: <span class="fl">0.50</span>,</span>
@@ -324,27 +466,27 @@ Answer
 <section id="my-first-notebook" class="level3">
 <h3 class="anchored" data-anchor-id="my-first-notebook">My first notebook</h3>
 <p>We first define the price of apples and bananas.</p>
-<div id="a81fc088" class="cell" data-execution_count="7">
+<div id="7d17797c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>prices <span class="op">=</span> {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"apple"</span>: <span class="fl">0.40</span>,</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"banana"</span>: <span class="fl">0.50</span>,</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we state how many apples and bananas we have in the basket.</p>
-<div id="dd3d80cb" class="cell" data-execution_count="8">
+<div id="fe49e3cc" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_basket <span class="op">=</span> {</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"apple"</span>: <span class="dv">1</span>,</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"banana"</span>: <span class="dv">6</span>,</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For each fruit in the basket we calculate the price to pay and add it to the total bill.</p>
-<div id="ca545563" class="cell" data-execution_count="9">
+<div id="e44e569a" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>total_grocery_bill <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit, count <span class="kw">in</span> my_basket.items():</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    total_grocery_bill <span class="op">+=</span> prices[fruit] <span class="op">*</span> count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We print a message with the total owed to the shop.</p>
-<div id="1c715fd7" class="cell" data-execution_count="10">
+<div id="db1adc4b" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I owe the grocer £</span><span class="sc">{</span>total_grocery_bill<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>I owe the grocer £3.40</code></pre>
@@ -779,6 +921,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../pages/001-workspace-setup.html" class="pagination-link" aria-label="Workspace Setup">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Workspace Setup</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../pages/091-loading-data.html" class="pagination-link" aria-label="Loading your data">
+        <span class="nav-page-text">Loading your data</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -787,7 +941,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/002-jupyter-notebooks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/edit/main/pages/002-jupyter-notebooks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

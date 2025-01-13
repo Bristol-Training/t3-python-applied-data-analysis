@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Machine Learning – Applied Data Analysis in Python</title>
+<title>Machine Learning – Applied Data Analysis in Python (T3)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/500-hyperparameters.html" rel="next">
-<link href="../pages/200-validation.html" rel="prev">
+<link href="../pages/100-fitting-data.html" rel="next">
+<link href="../pages/091-loading-data.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -110,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/300-machine-learning.html">Machine Learning</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/300-machine-learning.html">Model fitting</a></li><li class="breadcrumb-item"><a href="../pages/300-machine-learning.html">Machine Learning</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -128,7 +128,7 @@ window.Quarto = {
       <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Applied Data Analysis in Python</a> 
+      <a href="../">Applied Data Analysis in Python (T3)</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -144,41 +144,75 @@ window.Quarto = {
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Working framework</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workspace Setup</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/100-fitting-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fitting data: regression</span></a>
+  <a href="../pages/002-jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting familiar with Notebooks</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/200-validation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Testing your model</span></a>
+  <a href="../pages/091-loading-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading your data</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Model fitting</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/300-machine-learning.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Machine Learning</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
- <span class="menu-text">pages/400-nearest-neighbours.qmd</span>
-  </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/100-fitting-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitting data: regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/200-validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testing your model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/102-nearest-neighbours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitting data: classification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/500-hyperparameters.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Choosing hyperparameters</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
- <span class="menu-text">pages/600-correlation.qmd</span>
+      </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -186,12 +220,29 @@ window.Quarto = {
  <span class="menu-text">Discussion</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/999-how-to.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to read</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/999-contributors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributors</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -205,12 +256,12 @@ window.Quarto = {
   <li><a href="#the-supervised-learning-process" id="toc-the-supervised-learning-process" class="nav-link active" data-scroll-target="#the-supervised-learning-process">The supervised learning process</a></li>
   <li><a href="#advanced-ai-techniques" id="toc-advanced-ai-techniques" class="nav-link" data-scroll-target="#advanced-ai-techniques">Advanced AI Techniques</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/300-machine-learning.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/edit/main/pages/300-machine-learning.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/300-machine-learning.html">Model fitting</a></li><li class="breadcrumb-item"><a href="../pages/300-machine-learning.html">Machine Learning</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Machine Learning</h1>
 </div>
@@ -734,13 +785,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/200-validation.html" class="pagination-link" aria-label="Testing your model">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Testing your model</span>
+      <a href="../pages/091-loading-data.html" class="pagination-link" aria-label="Loading your data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Loading your data</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/500-hyperparameters.html" class="pagination-link" aria-label="Choosing hyperparameters">
-        <span class="nav-page-text">Choosing hyperparameters</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/100-fitting-data.html" class="pagination-link" aria-label="Fitting data: regression">
+        <span class="nav-page-text">Fitting data: regression</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -752,7 +803,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/300-machine-learning.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/edit/main/pages/300-machine-learning.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

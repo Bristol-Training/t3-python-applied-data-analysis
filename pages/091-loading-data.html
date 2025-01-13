@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Loading your data – Applied Data Analysis in Python</title>
+<title>Loading your data – Applied Data Analysis in Python (T3)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../pages/300-machine-learning.html" rel="next">
+<link href="../pages/002-jupyter-notebooks.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -136,12 +138,152 @@ window.Quarto = {
 
 </head>
 
-<body>
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/001-workspace-setup.html">Working framework</a></li><li class="breadcrumb-item"><a href="../pages/091-loading-data.html">Loading your data</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Applied Data Analysis in Python (T3)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Working framework</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workspace Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/002-jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting familiar with Notebooks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/091-loading-data.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Loading your data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Model fitting</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/300-machine-learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Machine Learning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/100-fitting-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitting data: regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/200-validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Testing your model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/102-nearest-neighbours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitting data: classification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/500-hyperparameters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing hyperparameters</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/990-what-next.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Discussion</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/999-how-to.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to read</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/999-contributors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributors</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -155,12 +297,12 @@ window.Quarto = {
   <li><a href="#multi-variable-scatter-matrix" id="toc-multi-variable-scatter-matrix" class="nav-link" data-scroll-target="#multi-variable-scatter-matrix">Multi-variable scatter matrix</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/091-loading-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/edit/main/pages/091-loading-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/001-workspace-setup.html">Working framework</a></li><li class="breadcrumb-item"><a href="../pages/091-loading-data.html">Loading your data</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Loading your data</h1>
 </div>
@@ -216,7 +358,7 @@ Trainer notes
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"https://bristol-training.github.io/applied-data-analysis-in-python/data/linear.csv"</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="b4bbd846" class="cell" data-execution_count="1">
+<div id="f7674c3c" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
@@ -265,7 +407,7 @@ Trainer notes
 <p>In this case we have one single <span class="math inline">\(x\)</span> column but in a more complicated data set we may have multiple <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span> etc. in which case the set together is sometimes given the upper-case letter <span class="math inline">\(X\)</span>. Each <span class="math inline">\(x_n\)</span> column is called a <em>feature</em>. Features are usually things that you have measured as part of a experiment (e.g.&nbsp;height of a person, temperature of a room, size of a garden etc.).</p>
 <p>Our <span class="math inline">\(y\)</span> column is the thing that we are going to create a model to predict the value of. The <span class="math inline">\(y\)</span> column of the input data is often called the <em>label</em> or the <em>target</em>.</p>
 <p>Let’s check how many rows we have:</p>
-<div id="132c6d10" class="cell" data-execution_count="2">
+<div id="084a56b0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data.count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>x    50
@@ -293,7 +435,7 @@ Tidy data
 </div>
 </div>
 <p>Let’s have a look at what the data looks like when plotted:</p>
-<div id="144291ba" class="cell" data-execution_count="3">
+<div id="733f8b5f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>sns.relplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -320,12 +462,12 @@ Tidy data
 <h3 class="anchored" data-anchor-id="multiple-cross-correlation">Multiple cross-correlation</h3>
 <p>It’s very common when working on real data that you have more than two figures of interest.</p>
 <p>To get a sense of some real data, let’s look at a <a href="https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset">housing dataset</a> provided by scikit-learn.</p>
-<div id="d9aa1b85" class="cell" data-execution_count="4">
+<div id="e7c12d61" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> fetch_california_housing</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>housing, target <span class="op">=</span> fetch_california_housing(as_frame<span class="op">=</span><span class="va">True</span>, return_X_y<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ade32646" class="cell" data-execution_count="5">
+<div id="0fea14bd" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>housing.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
@@ -409,7 +551,7 @@ Tidy data
 </div>
 <p>It has a row for each census block and a column for each feature, e.g.&nbsp;“median income of the block”, “average house age of the block” etc.</p>
 <p>To get the linear correlation between all these features, we call the <code>corr()</code> method on the <code>DataFrame</code>:</p>
-<div id="47e35e10" class="cell" data-execution_count="6">
+<div id="03b0f321" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>housing.corr()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
@@ -527,7 +669,7 @@ Tidy data
 <p>Here we see the features in our data set along both the rows and the columns. The correlation between each pair is given as a number between -1.0 and 1.0 where -1.0 is absolute inverse linear correlation, 1.0 is absolute positive linear correlation and zero is no linear correlation.</p>
 <p>We see the the 1.0 occuring on the diagonal (because a variable is always completely correlated with itself) and a whole range of values between -1.0 and 1.0 off-diagonal.</p>
 <p>If we want the correlation between two specific columns then we can request it from this object:</p>
-<div id="fea81788" class="cell" data-execution_count="7">
+<div id="c40495f3" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> housing.corr()</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>corr[<span class="st">"MedInc"</span>][<span class="st">"AveRooms"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
@@ -1154,7 +1296,7 @@ NaN
 <h3 class="anchored" data-anchor-id="plotting-the-correlation">Plotting the correlation</h3>
 <p>Viewing the correlation coefficients as a table is useful if you want the precise value of the correlation but often you want a visual overview which can give you the information you want at a glance.</p>
 <p>The easiest way to view it is as a heat map where each cell has a colour showing the value of the correlation using Seaborn which is a visualisation library that provides a higher-level interface to Matplotlib.</p>
-<div id="1611e2f8" class="cell" data-execution_count="8">
+<div id="68152b68" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>sns.heatmap(corr, vmin<span class="op">=-</span><span class="fl">1.0</span>, vmax<span class="op">=</span><span class="fl">1.0</span>, square<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">"RdBu"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1176,7 +1318,7 @@ NaN
 <p>Each box that is an intersection of a variable with another (e.g.&nbsp;row three, column one is the intersection between “AveRooms” and “MedInc”) shows the scatter plot of how the values of those variables relate to each other. If you see a strong diagonal line it means that those variables are correlated in this data set. It it’s more of a blob or a flat horizontal or vertical line then that suggests a low correlation.</p>
 <p>The top-right triangle of the plot is a repeat of the bottom-left triangle, just with the items in the pair reversed (i.e.&nbsp;row one, column three is the intersection between “MedInc” and “AveRooms”).</p>
 <p>The square boxes along the diagonal from the top-left to the bottom-right are those intersections of a variable with itself and so are used, not to show correlation, but to show the distribution of values of each single variable as a histogram.</p>
-<div id="f25dad4a" class="cell" data-execution_count="9">
+<div id="9e70e08c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas.plotting <span class="im">import</span> scatter_matrix</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> scatter_matrix(housing, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">16</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1773,6 +1915,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../pages/002-jupyter-notebooks.html" class="pagination-link" aria-label="Getting familiar with Notebooks">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting familiar with Notebooks</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../pages/300-machine-learning.html" class="pagination-link" aria-label="Machine Learning">
+        <span class="nav-page-text">Machine Learning</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1781,7 +1935,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/edit/main/pages/091-loading-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/applied-data-analysis-in-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/edit/main/pages/091-loading-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
